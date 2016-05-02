@@ -20,24 +20,8 @@ import java.util.stream.IntStream;
 public class SumOfNumbers {
 
     public int getSum(int a, int b) {
-        int first;
-        int last;
-        int sum = 0;
-
-        if (a < b) {
-            first = a;
-            last = b;
-        } else {
-            first = b;
-            last = a;
-        }
-
-        /*for (int i = first; i <= last; i++) {
-            sum += i;
-        }*/
-
-        sum = IntStream
-                .range(first, last + 1)
+        int sum = IntStream
+                .range(Math.min(a, b), Math.max(a, b) + 1)
                 .sum();
 
         return sum;
