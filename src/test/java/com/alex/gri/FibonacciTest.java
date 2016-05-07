@@ -2,6 +2,8 @@ package com.alex.gri;
 
 import org.junit.Test;
 
+import java.math.BigInteger;
+
 import static org.junit.Assert.*;
 
 /**
@@ -29,4 +31,13 @@ public class FibonacciTest {
         assertEquals(13, Fibonacci.fibonacci(7).intValue());
     }
 
+    @Test
+    public void fastFibonacciDoubling(){
+        assertEquals(13, Fibonacci.fastFibonacciDoubling(7).intValue());
+    }
+
+    @Test
+    public void testGetFibNumber() throws Exception {
+        assertEquals(0, Fibonacci.getFibNumber(300));
+    }
 }
